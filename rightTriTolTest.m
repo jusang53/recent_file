@@ -24,19 +24,8 @@ assert(sum(angles) == 180)
 angles = rightTri(triSkewed);
 assert(sum(angles) == 180)
 
-%% Test 2: isosceles triangles
-angles = rightTri(triIso);
-assert(angles(1) == 45)
-assert(angles(1) == angles(2))
- 
-%% Test 3: 30-60-90 triangle
+%% Test 2: 30-60-90 triangle
 angles = rightTri(tri306090);
 assert(abs(angles(1)-30) <= tol)
 assert(abs(angles(2)-60) <= tol)
 assert(abs(angles(3)-90) <= tol)
-
-%% Test 4: Small angle approximation
-angles = rightTri(triSkewed);
-smallAngle = (pi/180)*angles(1); % radians
-approx = sin(smallAngle);
-assert(abs(approx-smallAngle) <= tol, 'Problem with small angle approximation')
