@@ -10,4 +10,6 @@ close all;
 
 a = py.client_function.get_val();
 
+
+%% Test 1: temp > 20
 assert(a>=20)
