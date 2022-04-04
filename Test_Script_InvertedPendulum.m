@@ -33,8 +33,8 @@ writeValue(uaClient,refNode,0.0);
 
 %% Test 1
 tol = 0.01;
-for i = 0.1*length(y_val):length(y_val)
-    scatter(i,y_val(i)); hold on;
+for i = 0.5*length(y_val):length(y_val)
+    scatter(i-0.5*length(y_val)+1,y_val(i)); hold on;
     c = y_val(i) - ref;
     assert(-tol < c && c < tol)
 end
