@@ -37,21 +37,21 @@ c = y_val(1) - ref;
 assert(-tol < c && c < tol)
 
 %% Test 2
-c = y_val(2) - ref;
+c = y_val(11) - ref;
 assert(-tol < c && c < tol)
 
 %% Test 3
-c = y_val(3) - ref;
+c = y_val(21) - ref;
 assert(-tol < c && c < tol)
 
 %% Test 4
-c = y_val(4) - ref;
+c = y_val(31) - ref;
 assert(-tol < c && c < tol)
 
 %% Test 5
-c = y_val(5) - ref;
+c = y_val(41) - ref;
 assert(-tol < c && c < tol)
 
 %% Test 6
-c = y_val(6) - ref;
+c = y_val(51) - ref;
 assert(-tol < c && c < tol)
