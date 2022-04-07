@@ -22,12 +22,14 @@ writeValue(uaClient,refNode,ref);
 
 % Read Variables from Inverted Pendulum System in Target System
 F_val = [];
+x_val = [];
 y_val = [];
 for i=1:100
     [F,t,q] = readValue(uaClient,FNode);
     [y,t,q] = readValue(uaClient,yNode);
     F_val = [F_val F];
-    y_val = [y_val y(1)];
+    x_val = [x_val y(1)];
+    y_val = [y_val y(2)];
     pause(0.1);
 end
 
@@ -35,8 +37,14 @@ writeValue(uaClient,refNode,0.0);
 
 %% Test 1
 tol = 0.01;
-for i = 0.5*length(y_val):length(y_val)
-    scatter(i-0.5*length(y_val)+1,y_val(i)); hold on;
-    c = y_val(i) - ref;
+for i = 0.5*length(x_val):length(x_val)
+    c = x_val(i) - ref;
     assert(-tol < c && c < tol)
+end
+
+%% Test 2
+for i = 2:length(y_val)
+    d1 = y_val(i-1);
+    d2 = y_val(i);
+    assert(-tol < d2-d1 && d2-d1 < tol)
 end
