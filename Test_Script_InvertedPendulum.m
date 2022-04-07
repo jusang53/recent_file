@@ -48,4 +48,5 @@ for i = 2:length(y_val)
     d1 = y_val(i-1);
     d2 = y_val(i);
     assert(-tol < d2-d1 && d2-d1 < tol)
+    assert(-tol < d2 && d2 < tol)
 end
