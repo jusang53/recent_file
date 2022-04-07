@@ -43,6 +43,7 @@ for i = 0.5*length(x_val):length(x_val)
 end
 
 %% Test 2
+tol = 0.01;
 for i = 2:length(y_val)
     d1 = y_val(i-1);
     d2 = y_val(i);
