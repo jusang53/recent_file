@@ -35,15 +35,15 @@ end
 
 writeValue(uaClient,refNode,0.0);
 
-%% Test 1
+%% Test 1 Controller & Model Test
 tol = 0.01;
 for i = 0.5*length(x_val):length(x_val)
     c = x_val(i) - ref;
     assert(-tol < c && c < tol)
 end
 
-%% Test 2
-tol = 0.01;
+%% Test 2 Stability Test
+tol = 0.02;
 tol2 = 1;
 for i = 2:length(y_val)
     d1 = y_val(i-1);
