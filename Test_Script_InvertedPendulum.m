@@ -3,7 +3,7 @@ close all
 clc
 
 % Search OPC UA Server
-uaClient=opcua('192.168.0.16',4840);
+uaClient=opcua('10.74.23.221',4840);
 
 % Connect OPC UA Client with OPC UA Server
 connect(uaClient);
@@ -13,9 +13,11 @@ connect(uaClient);
 FNode = findNodeByName(uaClient.Namespace,'::F');
 refNode = findNodeByName(uaClient.Namespace,'::ref');
 yNode =  findNodeByName(uaClient.Namespace,'::y');
+startNode = findNodeByName(uaClient.Namespace,'::start');
 
 % Write Value on Inverted Pendulum System in Target System
 ref = 0.1;
+writeValue(uaClient,startNode,true);
 writeValue(uaClient,refNode,ref);
 
 % Read Variables from Inverted Pendulum System in Target System
