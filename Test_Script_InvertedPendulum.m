@@ -42,12 +42,9 @@ for i = 0.5*length(x_val):length(x_val)
     assert(-tol < c && c < tol)
 end
 
-%% Test 2 Stability Test
-tol = 0.02;
-tol2 = 1;
-for i = 2:length(y_val)
-    d1 = y_val(i-1);
-    d2 = y_val(i);
-    assert(-tol < d2-d1 && d2-d1 < tol)
-    assert(-tol2 < d2 && d2 < tol2)
+%% Test 2 Controller & Model Test
+tol = 1;
+for i = 1:length(y_val)
+    d = y_val(i);
+    assert(-tol < d && d < tol)
 end
