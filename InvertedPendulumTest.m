@@ -8,7 +8,7 @@ function testQuick(testCase)
 test_quick = [1 0.5 5];
 actSolution = stabilize2ref(test_quick);
 expSolution = 0.5;
-verifyEqual(testCase,actSolution,expSolution,"AbsTol",1e-05)
+verifyEqual(testCase,actSolution,expSolution,"AbsTol",1e-03)
 end
 
 function testProper(testCase)
