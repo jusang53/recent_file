@@ -1,5 +1,5 @@
 function final_state = stabilize2ref(args)
-% stabilize2ref : Á¦ÇÑ ½Ã°£ ³»¿¡ »óÅÂº¯¼ö°¡ ÃÊ±â»óÅÂ°ª¿¡¼­ ³ªÁß»óÅÂ°ªÀ¸·Î ¼ö·ÅÇÏ´ÂÁö Ã¼Å©
+% stabilize2ref : ì œí•œ ì‹œê°„ ë‚´ì— ìƒíƒœë³€ìˆ˜ê°€ ì´ˆê¸°ìƒíƒœê°’ì—ì„œ ë‚˜ì¤‘ìƒíƒœê°’ìœ¼ë¡œ ìˆ˜ë ´í•˜ëŠ”ì§€ ì²´í¬
 % arg1 -> kind of state (y1 or y2)
 % arg2 -> ref
 % arg3 -> time limit
@@ -12,6 +12,7 @@ ref = args(2);
 time_limit = args(3);
   
 % Start Simulation
+writeValue(uaClient,resetNode,0);
 writeValue(uaClient,startNode,1);
 
 % Write Value on Inverted Pendulum System in Target System
