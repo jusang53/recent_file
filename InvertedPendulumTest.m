@@ -8,21 +8,21 @@ function testQuick(testCase)
 test_quick = [1 0.5 5];
 actSolution = stabilize2ref(test_quick);
 expSolution = 0.5;
-verifyLessThanOrEqual(testCase,actSolution,expSolution)
+verifyLessThanOrEqual(testCase,abs(actSolution-expSolution)),0.05)
 end
 
 function testProper(testCase)
 test_proper = [1 0.5 10];
 actSolution = stabilize2ref(test_proper);
 expSolution = 0.5;
-verifyLessThanOrEqual(testCase,actSolution,expSolution)
+verifyLessThanOrEqual(testCase,abs(actSolution-expSolution)),0.05)
 end
 
 function testSlow(testCase)
 test_slow = [1 0.5 15];
 actSolution = stabilize2ref(test_slow);
 expSolution = 0.5;
-verifyLessThanOrEqual(testCase,actSolution,expSolution)
+verifyLessThanOrEqual(testCase,abs(actSolution-expSolution)),0.05)
 end
 
 %% File fixtures  
