@@ -35,7 +35,7 @@ global resetNode startNode FNode refNode yNode xNode
 
 % Connect OPC UA 
 % uaClient=opcua('10.64.146.121',4841);
-uaClient=opcua('10.74.23.221',4840);
+uaClient=opcua('10.74.23.169',4840);
 
 % Connect OPC UA Client with OPC UA Server
 connect(uaClient);
