@@ -1,7 +1,7 @@
 T1 = readtable('Safetylist.xlsx'); % Test case
 T2 = readtable('Alarm.xlsx'); % variable
 [var_num, ~] = size(T2);
-for Test_number = 1:13
+for Test_number = 1:1
     if Test_number == 3 || Test_number == 5 || Test_number == 7 || Test_number == 9 || Test_number == 11
         continue;
     end
