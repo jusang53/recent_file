@@ -85,7 +85,7 @@ global Remark_var_2;
     if dt < 2*delay
         Alarm_asrt(3) = 1;
     else
-        Alarm_asrt(3) = 0;
+        Alarm_asrt(3) = 1;
     end
     
     if abs(remark) > 0
