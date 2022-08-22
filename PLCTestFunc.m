@@ -1,4 +1,4 @@
-classdef PLCTest0816 < matlab.unittest.TestCase
+classdef PLCTestFunc < matlab.unittest.TestCase
     methods(Test)
         function Test1(testCase)
             actSolution = Test_Structure;
