@@ -23,7 +23,7 @@ for idx = 1:length(Test_idx)
 
     Testing = "Test" + Test_number;
     Testing = convertStringsToChars(Testing);
-    results = run(PLCTest0816,Testing);
+    results = run(PLCTestFunc,Testing);
     
     Reset();
 end
