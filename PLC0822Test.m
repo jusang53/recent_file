@@ -2,8 +2,8 @@ clc;
 
 % Test_idx = [1:24];
 Test_idx = [14];
-% Connect_and_CallNode();
-% Run_OTS();
+Connect_and_CallNode();
+Run_OTS();
 for idx = 1:length(Test_idx)
 %     i
     define_Node();
