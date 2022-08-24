@@ -1,7 +1,7 @@
 clc;
 
 %Test_idx = [1:24];
-Test_idx = [1,2,3,5,10,15,21];
+Test_idx = [1,2,3,10,15,22];
 Connect_and_CallNode();
 Run_OTS();
 for idx = 1:length(Test_idx)
