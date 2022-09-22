@@ -14,8 +14,8 @@ function y = Setting()
     connect(uaClient);
 
     % import excel files (Safetylist , MemMapInfo)
-    T1 = readtable('C:\Users\PC\Desktop\HHI_220923\code\safetylist_auto.xlsx');
-    T2 = readtable('C:\Users\PC\Desktop\HHI_220923\code\MemMapInfo.xlsx');
+    T1 = readtable('safetylist_auto.xlsx');
+    T2 = readtable('MemMapInfo.xlsx');
     
     % Call Node (OTS mode , Input variables , Output variables ...)
     dEngineSpeed = findNodeByName(uaClient.Namespace,'::dEngineSpeed');
