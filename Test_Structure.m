@@ -15,12 +15,8 @@ function Alarm_asrt = Test_Structure
             break
         end
     end
-    test_structure = table2array(T1(n_excel,29));
-    test_structure = test_structure{1,1};
-    test_structure = str2num(test_structure);
-    if test_structure == 1
-        Alarm_asrt = Structure_1;
-    elseif test_structure == 2
-        Alarm_asrt = Structure_2;
-    end
+%     test_structure = table2array(T1(n_excel,29));
+%     test_structure = test_structure{1,1};
+%     test_structure = str2num(test_structure);
+    Alarm_asrt = Structure_1;
 end
