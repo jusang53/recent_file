@@ -1,11 +1,4 @@
 classdef HHI_SafetyList_Test < matlab.unittest.TestCase
-     methods(Test, TestTags = {'Setting'})
-        function Setting(testCase)
-            actSolution = Setting();
-            expSolution = 1;
-            testCase.verifyEqual(actSolution,expSolution)
-        end
-     end
      methods(Test, TestTags = {'PT52'})
         function PT52_Sensor_failure(testCase)
             global Test_number;
@@ -37,6 +30,13 @@ classdef HHI_SafetyList_Test < matlab.unittest.TestCase
             Test_number = 57;
             actSolution = Test_Structure;
             expSolution = [0 1 1 0];
+            testCase.verifyEqual(actSolution,expSolution)
+        end
+     end
+     methods(Test, TestTags = {'Setting'})
+        function Setting(testCase)
+            actSolution = Setting();
+            expSolution = 1;
             testCase.verifyEqual(actSolution,expSolution)
         end
      end
