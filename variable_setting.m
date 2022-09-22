@@ -1,4 +1,6 @@
 define_Node();
+n_excel
+T1(n_excel,26)
 Alarm = T1(n_excel,26);
 Alarm = table2array(Alarm);
 Alarm = str2num(Alarm{1,1});
